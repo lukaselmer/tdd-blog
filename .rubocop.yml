@@ -1,2 +1,6 @@
 inherit_from:
   - https://raw.githubusercontent.com/renuo/rails-application-setup-guide/master/templates/.rubocop_base.yml
+
+Metrics/BlockLength:
+  Exclude:
+  - config/initializers/simple_form_bootstrap.rb
