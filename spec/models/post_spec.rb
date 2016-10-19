@@ -2,20 +2,18 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   describe 'validations' do
-    let(:valid_post) { build_stubbed(:post) }
+    subject { build_stubbed(:post) }
 
-    it 'validates valid post' do
-      expect(valid_post.valid?).to be_truthy
-    end
+    it { is_expected.to be_valid }
 
     it 'validates the title' do
-      valid_post.title = ''
-      expect(valid_post.valid?).to be_falsey
+      subject.title = ''
+      expect(subject).not_to be_valid
     end
 
     it 'validates the content' do
-      valid_post.content = ''
-      expect(valid_post.valid?).to be_falsey
+      subject.content = ''
+      expect(subject).not_to be_valid
     end
   end
 end
