@@ -99,7 +99,7 @@ if [ ! $? -eq 0 ]; then
   exit 1
 fi
 
-bundle exec rspec
+bundle exec bin/rspec
 if [ ! $? -eq 0 ]; then
   echo 'rspec did not run successfully, commit aborted'
   exit 1
