@@ -41,13 +41,13 @@ group :development, :test do
   gem 'byebug'
   gem 'pry-byebug'
   gem 'pry-rails'
+  gem 'rspec-rails'
 end
 
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_girl_rails'
-  gem 'rspec-rails'
   gem 'simplecov', require: false
 end
 
